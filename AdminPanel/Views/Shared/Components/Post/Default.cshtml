@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CSharp.ViewComponentTask.Models.Post>
+
+<div class="recent-posts">
+    @foreach (var post in Model)
+    {
+
+        <div class="recent-wrap">
+            <div class="recent-post-thumb">
+                <figure>
+                    <div class="overlay-hover"></div>
+                    <img src="@post.ImageUrl" alt="@post.Title" />
+                </figure>
+            </div>
+            <div class="recent-post-detail">
+                <a href="#">@post.Title<span></span></a>
+                <br>
+
+                <div class="post-content">
+                    <a href="#">@post.Content<span></span></a>
+                </div>
+                <br>
+                <br>
+                <a href="#">@post.PublishDate.ToString()</a>
+                <br>
+
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+    }
+</div>

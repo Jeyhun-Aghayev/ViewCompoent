@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CSharp.ViewComponentTask.Models.PopularTag>
+
+<div class="widget-detail">
+    <ul>
+        @foreach (var popularTag in Model.Where(c => c.Title != null))
+        {
+         
+               <a href="#">@popularTag.Title<span>(5)</span></a>
+         
+        }
+    </ul>
+</div>
